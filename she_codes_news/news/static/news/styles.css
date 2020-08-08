@@ -88,3 +88,44 @@
 #create-story {
     background-color: blueviolet;
 }
+
+#form_id {
+    background-color: blueviolet;
+}
+
+input {
+    display: inline-block;
+    float: left;
+    width: 500px;
+}
+
+textarea {
+    display: inline-block;
+    float: left;
+    width: 500px;
+}
+
+label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+#submit_id {
+    background-color: lightgray;
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 110px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* ADD MEDIA QUERY WHEN PAGE WIDTH IS LESS THAN 400 PX
+    > WIDTH OF INPUT FIELDS = 250
+    > WIDTH OF LABEL / SUBMIT ID = LESS ONLY IF REQUIRED */
