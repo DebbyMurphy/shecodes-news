@@ -9,4 +9,10 @@ class CreateAccountView(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'users/createAccount.html'
 
+class ProfileView(generic.DetailView):
+    model = CustomUser
+    context_object_name = 'profile'
+    template_name = 'users/profile.html'
+
+
 # Create your views here.
