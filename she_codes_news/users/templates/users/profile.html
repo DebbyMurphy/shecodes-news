@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Hi {user}, this is your account info</h2>
+<h2>{{ user }}'s Profile</h2>
 
 <div id="profile_id">
-    <p>Username: {user}</p>
-    <p>Username: {email}</p>
+    <p>Username: {{ user }}</p>
+    <p>Email: {{ profile.email }}</p>
 </div>
 
 {% endblock %}
