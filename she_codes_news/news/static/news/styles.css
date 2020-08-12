@@ -89,10 +89,6 @@
     background-color: blueviolet;
 }
 
-#form_id {
-    background-color: blueviolet;
-}
-
 input {
     display: inline-block;
     float: left;
@@ -126,6 +122,7 @@ label {
     font-size: 18px;
 }
 
-/* ADD MEDIA QUERY WHEN PAGE WIDTH IS LESS THAN 400 PX
-    > WIDTH OF INPUT FIELDS = 250
-    > WIDTH OF LABEL / SUBMIT ID = LESS ONLY IF REQUIRED */
+/* @media (max-width: 400px) {
+    input {
+        width: 250px;
+    } */

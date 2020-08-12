@@ -12,3 +12,10 @@ class NewsStory(models.Model):
         on_delete=models.CASCADE
     )
 
+class Author(models.Model):
+    pass
+#     first_name = models.CharField(max_length=100)
+#     last_name = models.CharField(max_length=100)
+#     title = models.CharField(max_length=100)
+#     content = models.TextField(max_length=1000)
+

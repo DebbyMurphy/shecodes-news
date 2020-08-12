@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}    
+
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+    
+    <a href="{% url 'news:newsStory' %}">Write News Story</a>
+
+    <h2>View Articles By Author</h2>
+<!-- 
+    <div id="latest-contributors">
+        {% if latest_contributors %}
+            {% for author in latest_contributors %}
+                {% include "./authorCard.html" with author=author position=forloop.counter %}
+            {% endfor %}
+        {% else %}
+            <p>No stories Author overviews currently available.</p>
+        {% endif %}
+    </div>
+
+    <div id="all-contributors">
+        {% if latest_contributors %}
+            {% for author in all_contributors %}
+                {% include "./authorCard.html" with author=author %}
+            {% endfor %}
+        {% else %}
+            <p>No stories Author overviews currently available.</p>
+        {% endif %}
+    </div> -->
+
+{% endblock %}

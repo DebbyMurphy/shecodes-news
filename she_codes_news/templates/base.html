@@ -23,6 +23,12 @@
             {% include './nav.html' %}
         </header>
 
+            <div id="add-story-link">
+                {% if user.is_authenticated and request.get_full_path != "/news/add-story/" %}
+                    <a href="{% url 'news:newsStory' %}">Write News Story</a>
+                {% endif %}
+            </div>
+
         {% block content %}{% endblock %}
     </body>
 </html>

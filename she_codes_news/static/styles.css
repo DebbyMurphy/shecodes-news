@@ -39,8 +39,9 @@ h3 {
 nav {
     flex-basis: 20%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
 }
 
 a {
@@ -51,4 +52,25 @@ a {
 
 a, p {
     font-family: monospace;
+}
+
+#add-story-link {
+    background-color: #7A44A1;
+    text-align: right;
+    padding: 20px;
+}
+
+#add-story-link a {
+    font-size: 18px;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #add-story-link {
+        padding: 10px;
+    }
 }
