@@ -9,13 +9,6 @@ class NewsStory(models.Model):
     image_url = models.URLField(max_length=200)
     author = models.ForeignKey(
         get_user_model(),
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE, 
+        related_name="published_stories"
     )
-
-class Author(models.Model):
-    pass
-#     first_name = models.CharField(max_length=100)
-#     last_name = models.CharField(max_length=100)
-#     title = models.CharField(max_length=100)
-#     content = models.TextField(max_length=1000)
-

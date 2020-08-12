@@ -15,4 +15,9 @@ class ProfileView(LoginRequiredMixin, generic.DetailView):
     context_object_name = 'profile'
     template_name = 'users/profile.html'
 
-# Create your views here.
+class AccountUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = CustomUser
+    context_object_name = 'account-update'
+    template_name = 'users/account-update.html'
+    success_url = reverse_lazy('index:news')
+

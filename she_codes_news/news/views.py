@@ -4,6 +4,7 @@ from .models import NewsStory
 from .forms import StoryForm
 from django.db.models.functions import Trunc
 from django.contrib.auth.mixins import LoginRequiredMixin
+from users.models import CustomUser
 
 
 class AddStoryView(LoginRequiredMixin, generic.CreateView):
@@ -37,15 +38,12 @@ class StoryView(generic.DetailView):
     context_object_name = 'story'
 
 
-class AuthorsView(generic.DetailView):
+class AuthorsView(generic.ListView):
     template_name = 'news/authors.html'
-    
-    # def get_queryset(self):
-    #     '''Return all authors.'''
-    #     return Author.objects.all()
+    model = CustomUser
+    context_object_name = "authors"
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['latest_contributors'] = Author.objects.order_by('-pub_date')[:4]
-    #     context['all_contributors'] = Author.objects.order_by('-pub_date')[4:]
-    #     return context
+class AuthorProfileView(generic.DetailView):
+    template_name = 'news/authorProfile.html'
+    model = CustomUser
+    context_object_name = "author"

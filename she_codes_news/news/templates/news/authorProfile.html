@@ -1,4 +1,4 @@
-<!-- {% extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}    
 
 
@@ -7,14 +7,18 @@
 {% endblock %}
 
 {% block content %}
-
-<div id="author-wrapper">
-    <h2>{{ author.name }}</h2>
-    <h4>{{ author.about }}</h4>
-    <div id="story-content">
-        <img src="{% static '/news/images/placeholder-5.jpg' %}">
-        <!-- {{ story.content|linebreaks }} -->         <!-- PULL THROUGH STORIES THAT WERE WRITTEN BY THE SELECTED AUTHOR -->
+    <div id="author-title">
+        <h2>Articles By {{ author.first_name }} {{ author.last_name }}</h2>
     </div>
-</div>
+    
+    <div id="author-image">
+        <img src="{{ author.profile_img }}">
+    </div>
 
-{% endblock %} -->
+    <div id="author-articles">    
+
+    </div>
+
+
+
+{% endblock %}
