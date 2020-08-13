@@ -7,18 +7,29 @@
 {% endblock %}
 
 {% block content %}
+    
+<div id="author-overview">
     <div id="author-title">
         <h2>Articles By {{ author.first_name }} {{ author.last_name }}</h2>
     </div>
-    
+
+        <div id="author-image">
+            <img src="{{ author.profile_img }}">
+        </div>
+
     <div id="author-image">
-        <img src="{{ author.profile_img }}">
+        <p>{{ author.bio }}</p>
     </div>
+</div>
 
-    <div id="author-articles">    
-
-    </div>
-
-
+<div id="author-stories-wrapper">
+    {% if author.published_stories.all %}
+        {% for story in author.published_stories.all %}
+            {% include "./storyCard.html" with story=story %}
+        {% endfor %}
+    {% else %}
+        <p>No author overviews currently available.</p>
+    {% endif %}
+</div>
 
 {% endblock %}

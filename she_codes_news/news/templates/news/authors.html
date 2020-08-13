@@ -10,7 +10,7 @@
 
     <h2>View Articles By Author</h2>
 
-    <div id="all-contributors">
+    <div id="author-cards-wrapper">
         {% if authors %}
             {% for author in authors %}
                 {% include "./authorCard.html" with author=author %}
@@ -21,5 +21,3 @@
     </div>
 
 {% endblock %}
-
-
