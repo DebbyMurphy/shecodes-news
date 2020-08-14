@@ -8,9 +8,13 @@
 {% block content %}
 <h2>{{ user }}'s Profile</h2>
 
-<div id="profile_id">
+<div id="account-details">
+    <img src="{{profile.profile_img}}">
+    <p>First Name: {{ profile.first_name }}</p>
+    <p>Last Name: {{ profile.last_name }}</p>  
     <p>Username: {{ user }}</p>
     <p>Email: {{ profile.email }}</p>
+    <p>Biography: {{ profile.bio }}</p>
 </div>
 
 {% endblock %}
