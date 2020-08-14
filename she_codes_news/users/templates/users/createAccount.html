@@ -1,8 +1,13 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}">
+{% endblock %}
 
 {% block content %}
 <h2>Create Account</h2>
-<form method="post">
+<form id="create-account-form" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button id="submit_id" type="submit">Create Account</button>

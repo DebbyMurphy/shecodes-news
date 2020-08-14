@@ -9,6 +9,7 @@
 {% block content %}
 
     <h2>Latest News</h2>
+   
     <p>{% now "jS F Y H:i" %}</p>
 
     <div id="latest-stories">
@@ -21,6 +22,8 @@
         {% endif %}
     </div>
 
+    <h3 id="index-h3">More News</h3>
+   
     <div id="all-stories">
         {% if latest_stories %}
             {% for story in all_stories %}

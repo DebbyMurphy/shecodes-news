@@ -2,8 +2,8 @@
     <a href="{% url 'news:authorProfile' author.id %}">
         <img src="{{author.profile_img}}">
         <div class="author-card-text">
-            <h4>{{ author.first_name }} {{ author.last_name}}</h4>
-            <h4>{{ author.bio }}</h4>
+            <h3>{{ author.first_name }} {{ author.last_name}}</h3>
+            <p>{{ author.bio }}</p>
         </div>
     </a>
 </div>

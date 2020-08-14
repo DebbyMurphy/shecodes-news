@@ -1,3 +1,5 @@
+/* STORY CSS */
+
 .story-card {
     margin: 2px;
     border: 1px solid #000;
@@ -88,6 +90,57 @@
 #create-story {
     background-color: blueviolet;
 }
+
+/* AUTHORS CSS */
+
+#author-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px 300px;
+    gap: 1px 1px;
+}
+
+.author-card {
+    margin: 2px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.author-card img {
+    width: 33%;
+    height: 100%;
+    margin-right: 5px;
+}
+
+.author-card a {
+    display: flex;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.author-card .author-card-text h3 {
+    font-size: 20px;
+}
+
+.author-card .author-card-text p {
+    font-size: 16px;
+}
+
+/* AUTHOR PROFILE CSS */
+
+#author-stories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#author-stories .story-card {
+    flex-basis: 32%;
+    flex-grow: 1;
+}
+
+/* FORM CSS */
 
 input {
     display: inline-block;

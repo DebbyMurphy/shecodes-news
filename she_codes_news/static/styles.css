@@ -12,7 +12,7 @@ header {
 }
 
 img {
-    filter: grayscale(100%);
+    filter: grayscale(80%);
 }
 
 h1 {
@@ -29,6 +29,13 @@ h2 {
 h3 {
     font-size: 2rem;
     margin: 0;
+}
+
+#index-h3 {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: inherit;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 #header-text {
