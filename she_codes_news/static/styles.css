@@ -41,8 +41,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 20px;
 }
+
+nav a:hover {
+    text-decoration: underline;
+  }
 
 a {
     margin: 2px;
@@ -61,8 +65,30 @@ a, p {
 }
 
 #add-story-link a {
-    font-size: 18px;
+    font-size: 20px;
     color: white;
+}
+
+#add-story-link a:hover {
+    text-decoration: underline;
+  }
+
+.story-card:hover {
+    background-color: lightgrey;
+}
+
+  
+
+@media (max-width: 1500px) {
+    nav {
+        font-size: 16px;
+    }
+    #add-story-link a {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -72,5 +98,8 @@ a, p {
     }
     #add-story-link {
         padding: 10px;
+    }
+    h1 {
+        font-size: 2rem;
     }
 }

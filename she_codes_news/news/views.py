@@ -7,6 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from users.models import CustomUser
 
 
+
 class AddStoryView(LoginRequiredMixin, generic.CreateView):
     form_class = StoryForm
     context_object_name = 'storyForm'
