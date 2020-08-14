@@ -10,7 +10,7 @@
 
 <div id="story-wrapper">
     <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }} | {{ story.pub_date }}</h4>
+    <h4>{{ story.author.first_name }} {{ story.author.last_name }} | {{ story.pub_date }}</h4>
     
     <div id="story-content">
         <img src="{{story.image_url}}">
